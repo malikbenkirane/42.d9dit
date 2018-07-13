@@ -5,7 +5,7 @@ getlink()
 	TARGET_URL="https://projects.intra.42.fr/piscine-c-day-09-$TARGET_ID/mine"
 	sed "/'HIDDENPASSWORD'/s/HIDDENPASSWORD/$PASSWD/" script.js > .hidden.$1.js
 	echo $TARGET_URL
-	sed -e "/'USER_LOGIN'/s/USER_LOGIN/'$USER_LOGIN'/" -i '' .hidden.$1.js
+	sed -e "/'USER_LOGIN'/s/'USER_LOGIN'/'$USER_LOGIN'/" -i '' .hidden.$1.js
 	sed -e "/TARGET_ID/s/TARGET_ID/'$TARGET_ID'/" -i '' .hidden.$1.js
 	sed -e "/TARGET_URL/s@TARGET_URL@'$TARGET_URL'@" -i '' .hidden.$1.js
 	chmod 600 .hidden.$1.js

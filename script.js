@@ -22,7 +22,7 @@ main_page.open('https://intra.42.fr', function(status) {
         main_page.evaluate(function() {
           ilogin = document.getElementById('user_login');
           ipassw = document.getElementById('user_password');
-          ilogin.value = 'mben-kir';
+          ilogin.value = 'USER_LOGIN';
           ipassw.value = 'HIDDENPASSWORD';
           signin_button = document.querySelector('input.btn.btn-login');
           signin_button.click();
