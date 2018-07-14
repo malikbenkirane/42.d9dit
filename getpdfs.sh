@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 DST=merge-$(date +%H%M%S)
 mkdir $DST
